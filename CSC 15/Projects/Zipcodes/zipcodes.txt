@@ -1,0 +1,12 @@
+91340 San Fernando
+94115 San Francisco  
+95111 San Jose 
+93406 San Luis Obispo 
+93118 Santa Barbara
+95067 Santa Cruz
+95409 Santa Rosa
+96019 Shasta Lake
+93062 Simi Valley
+96158 South Lake Tahoe
+95267 Stockton
+96146 Tahoe City

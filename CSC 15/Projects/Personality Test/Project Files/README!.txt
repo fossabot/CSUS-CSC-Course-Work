@@ -1,0 +1,1 @@
+For this program to work, personalty.txt need to be on the desktop.
