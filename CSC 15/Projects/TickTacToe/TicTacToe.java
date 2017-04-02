@@ -181,29 +181,5 @@ public class TicTacToe
 			}
 		} while(!(answer.equalsIgnoreCase("y") || answer.equalsIgnoreCase("n")));
 		return answer;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 }
