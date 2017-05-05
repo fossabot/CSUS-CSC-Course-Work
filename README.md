@@ -7,7 +7,7 @@ Here is my course work from all of the computer science courses I took while at 
 
 # Timeline
 
-Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
+Here are the courses took and when I completed them.
 
 | Course | Completed |
 | ------ | ------ |
