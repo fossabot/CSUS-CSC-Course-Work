@@ -11,5 +11,5 @@ Here is my course work from all of the computer science courses I took while at 
 
 Here are some of the tools I used:
 
-* [CodeEnvy.io](https://codenvy.io/) - HTML enhanced for web apps!
-* [Sublime Text](https://www.sublimetext.com/) - awesome web-based text editor
+* [CodeEnvy.io](https://codenvy.io/) - Cloud workspaces for development teams.
+* [Sublime Text](https://www.sublimetext.com/) - Awesome desktop text editor!
