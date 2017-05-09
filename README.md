@@ -1,6 +1,6 @@
 # CSUS CSC Course Work
 
-[![N|Solid](https://www.cloudflare.com/media/images/web-badges/cf-web-badges-f-1.png)](https://www.cloudflare.com/)
+[![N|Solid](https://www.cloudflare.com/media/images/web-badges/cf-web-badges-f-1.png)](https://www.cloudflare.com/) [![N|Solid](https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 [![N|Solid](https://raw.githubusercontent.com/MarcWoodyard/CSUS-CSC-Course-Work/master/screenshot.jpg)](https://codenvy.io/)
 
