@@ -31,19 +31,22 @@ public boolean equals(Object o) {
 	if(this == o)
 		return true;
 	
-	if(o instanceof Logger) //False if parameter is null too.
-		return true;
-		
+	if(!(o instanceof Logger))
+		return false;
+	
 	Logger other = (Logger)o; //Cast parameter to foo.
 	boolean equal = (this.numEnteries == other.numEntries);
-	
+
 	for(int i = 0; i < this.numEnteries; i++) {
 		equal = eq && (this.dates[i].equals(other.dates[i])) && (this.logs[i].equals(other.logs[i]));	
 	}
-	
+
 	return equal;
 }
 ```
+
+[YouTube Video - Overriding equals and hashCode in Java - 039](https://www.youtube.com/watch?v=7V3589CReug)
+
 > Simulate and/or write selection sort and/or binary search on an array.
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/f8hXR_Hvybo/0.jpg)](https://www.youtube.com/watch?v=f8hXR_Hvybo)
