@@ -4,11 +4,13 @@
 ```java
 import java.io.*;
 import java.util.*;
+
 public class Reader {
     public static void main(String[] args) {
     	ArrayList<Integer> a = new ArrayList<>();
         ArrayList<String> b = new ArrayList<>();
         File inputFile = new File("data.txt");
+	
         while(file.hasNext() == true) {
             if(file.hasNextInt() == true)
                 a.add(file.nextInt());
