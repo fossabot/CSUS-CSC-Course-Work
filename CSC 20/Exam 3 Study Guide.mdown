@@ -6,14 +6,14 @@ import java.io.*;
 import java.util.*;
 public class Reader {
     public static void main(String[] args) {
-        ArrayList<String> a = new ArrayList<>();
-        ArrayList<Integer> b = new ArrayList<>();
+    	ArrayList<Integer> a = new ArrayList<>();
+        ArrayList<String> b = new ArrayList<>();
         File inputFile = new File("data.txt");
         while(file.hasNext() == true) {
             if(file.hasNextInt() == true)
-                b.add(file.nextInt());
+                a.add(file.nextInt());
             else
-                a.add(file.next());
+                b.add(file.next());
         }
         
         for(int i = 0; i < a.size(); i++) {
