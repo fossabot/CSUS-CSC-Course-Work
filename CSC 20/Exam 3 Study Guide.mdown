@@ -1,0 +1,101 @@
+# Exam 3 Study Guide
+> Write a small program that opens a file, uses a Scanner to read tokens from the file, and does  something with the data. You should review the most common methods found in the following classes.
+
+```java
+import java.io.*;
+import java.util.*;
+public class Reader {
+    public static void main(String[] args) {
+        ArrayList<String> a = new ArrayList<>();
+        ArrayList<Integer> b = new ArrayList<>();
+        File inputFile = new File("data.txt");
+        while(file.hasNext() == true) {
+            if(file.hasNextInt() == true)
+                b.add(file.nextInt());
+            else
+                a.add(file.next());
+        }
+        
+        for(int i = 0; i < a.size(); i++) {
+            System.out.println(a.get(i));
+        }
+        
+        for(int j = 0; j < a.size(); j++) {
+            System.out.println(b.get(j));
+        }
+}
+```
+> Write an equals method.
+```java
+public boolean equals(Object o) {
+	if(this == o)
+		return true;
+	
+	if(!(o instanceof Logger)) //False if parameter is null too.
+		return true;
+		
+	Logger Other = (Logger)o; //Cast parameter to foo.
+	boolean equal = (this.numEnteries == other.numEntries);
+	
+	for(int i = 0; i < numEnteries; i++) {
+		equal = eq && (this.dates[i].equals(other.dates[i])) &&                                                     (this.logs[i].equals(other.logs[i]));	
+	}
+	
+	return equal;
+}
+```
+> Simulate and/or write selection sort and/or binary search on an array.
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/f8hXR_Hvybo/0.jpg)](https://www.youtube.com/watch?v=f8hXR_Hvybo)
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/P3YID7liBug/0.jpg)](https://www.youtube.com/watch?v=P3YID7liBug)
+
+> Simulate the shunting-yard algorithm on a logic expression.
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/TrfcJCulsF4/0.jpg)](https://www.youtube.com/watch?v=TrfcJCulsF4)
+
+> Big-O problems similar to those found on the worksheet in Piazza.
+
+[Worksheet Link](https://github.com/MarcWoodyard/CSUS-CSC-Course-Work/blob/master/CSC%2020/Lecture%20Notes/Big%20O.pdf) 
+
+> Know how to use these methods.
+
+* [List: add, remove, get, set, size](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)
+* [Map: get, put, keySet, size](https://docs.oracle.com/javase/8/docs/api/java/util/Map.html)
+* [Set: add, contains, size, iterator](https://docs.oracle.com/javase/8/docs/api/java/util/Set.html)
+* [Stack: push, pop, isEmpty](https://docs.oracle.com/javase/8/docs/api/java/util/Stack.html)
+* [Queue: add, remove, isEmpty](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
+* [Random: nextInt, nextDouble](https://docs.oracle.com/javase/8/docs/api/java/util/Random.html)
+* [Scanner: hasNext, hasNextInt, hasNextLine, next, nextInt, nextLine](https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html)
+* [String: charAt, substring, equals, compareTo](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html)
+
+>  Problems similar to Practice-It Self-Checks and Exercises from Chapters 12 and 16. There will be no recursive backtracking or recursive linked-list problems.
+
+[Practice-It](https://practiceit.cs.washington.edu/problem/list)
+
+> Write a class for a missing type that makes a main program work.
+
+```java
+    public class Counter {
+        int count = 0;
+        
+        public Counter(int count) {
+            this.count = count;
+        }
+        
+        public void add() {
+            this.count++;
+        }
+        
+        public int getCount() {
+            return this.count;
+        }
+        
+        public boolean reset() {
+            this.count = 0;
+            return true;
+        }
+    }
+```
+
+
