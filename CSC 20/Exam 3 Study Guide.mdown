@@ -31,7 +31,7 @@ public boolean equals(Object o) {
 	if(this == o)
 		return true;
 	
-	if(!(o instanceof Logger)) //False if parameter is null too.
+	if(o instanceof Logger) //False if parameter is null too.
 		return true;
 		
 	Logger other = (Logger)o; //Cast parameter to foo.
