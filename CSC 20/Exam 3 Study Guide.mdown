@@ -83,10 +83,6 @@ public boolean equals(Object o) {
 ```java
     public class Counter {
         private int count = 0;
-	
-	public Counter() {
-		//Initialize Counter Object.
-	}
         
         public Counter(int count) {
         	this.count = count;
