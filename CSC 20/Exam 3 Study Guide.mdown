@@ -91,10 +91,6 @@ public boolean equals(Object o) {
         public void add() {
         	this.count++;
         }
-	
-	public void sub() {
-		this.count--;
-	}
         
         public int getCount() {
         	return this.count;
