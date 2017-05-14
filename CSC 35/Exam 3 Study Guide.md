@@ -65,19 +65,85 @@
 
 > Operands
 
+- The number of operands used in an instruction varies greatly by processor.
+- More operands give greater functionality, but require more bits to store in memory.
+- Typically processors contain 1, 2 or 3 operands.
+
+##### Single Operand Processors
+- Single operand processors are also known as accumulators.
+- Operates similar to your hand calculator.
+- The accumulator register.
+    - Used for all mathematical computations.
+    - Other registers simply are used to compare and hold temporary data.
+```sh
+# z = 50 - (x + y)
+load x
+add y # x + y
+store temp
+load $50
+sub temp # 50 – temp
+store z
+ ```
+##### Two Operand Processors
+- Allows two operands to be specified
+- For computations, both operands are typically treated as input and one is used to store the result.
+```sh
+# z = 50 - (x + y)
+mov x, %R1
+add y, %R1 # x + y
+mov $50, %R2
+sub %R1, %R2 # 50 – R1
+mov %R2, z
+ ```
+
+##### Three Operand Processors
+- Allows two input values like before, but also can specify a third output operand.
+- The third operand can also be used as a index for simple addressing.
+
+ ```sh
+# z = 50 - (x + y)
+add x, y, %R1 # x + y
+sub $50, %R1, z
+ ```
+
 > CISC vs. RISC
+- CISC - **C**omplex **I**nstruction **S**et **C**omputer
+    - Hardware should contain the complexity rather than the software.
+        ##### Why CISC?
+        - Better preformance.
+        - Eaiser to Compile.
+        - Generally requires fewer instructions than RISC to perform the same computation.
+        - Programs written for CISC architectures tend to take less space in memory.
+- RISC - **R**educed **I**nstruction **S**et **C**omputer (RISC)
+    - Software should contain the complexity rather than hardware.
+        ##### Why RISC?
+        - Simpler instructions make it easier to implement on different processors – and make them more efficient.
+        - Easier to program and master by programmers – less to learn.
+        - Memory access is minimalized.
 
 > Instruction Encoding
+- Each instruction on a computer is encoded into 1's and 0's.
+- All information that needs to be stored, has to be converted to bits.
+- Instructions can either be stored using a variable-length or fixed number of bytes.
+- The opcode contains a unique value that indicates the operation to be performed.
+
+ ```sh
+ADD %r1, %r2    ---->     0100 01 10
+
+0100 - Opcode for add
+01  - Register %r1
+10  - Register %r2
+ ```
 
 > Multiprogrammed
-
-> Timeslice and context switch
-#### Timeslice
 - Most computers support multiprogramming (aka multitasking)
 - Presents the illusion that multiple programs are running simultaneously on a computer.
 - **Each program executes for a fixed amount of time, known as a timeslice**.
-- user programs do not know if other programs are running on the system.
+- User programs do not know if other programs are running on the system.
 
+> Timeslice and context switch
+#### Timeslice
+- **Each program executes for a fixed amount of time, known as a timeslice**.
 #### Context Switch
 - When a program's time slice ends…
     1. Operating system stops it.
