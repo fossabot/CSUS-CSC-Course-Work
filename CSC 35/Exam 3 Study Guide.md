@@ -13,7 +13,7 @@
 ## Components of the Processor
 
 ## Privileged mode
-Privileged – only the processor and OS can change it.
+Privileged – Only the processor and OS can change it.
 
 ## Types of Operands
 
