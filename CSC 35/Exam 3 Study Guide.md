@@ -62,6 +62,32 @@
 > How they work on the x86
 
 > von Neumann architecture
+- Programs are stored and executed in memory.
+- Separation of processing from storage.
+- Different system components communicate over shared buses.
+
+##### Buses
+- Electronic pathway that transports data between components.
+- Think of it as a "highway".
+    - Data moves on shared paths.
+    - Otherwise, the computer would be very complex.
+
+##### Address Bus
+- Used by the processor to access a specific piece of data.
+- This "address" can be...
+        - A specific byte in memory
+        - Unique IO port
+        - etc…
+##### Data Bus
+- The actual data travels ove the data bus
+- An integer that has the same number of bits as the system is called a word.
+##### Control Bus
+- The control bus controls the timing and synchronizes the subsystems.
+- Specifies what is happening...
+    -  Read data
+    - Write data
+    - Reset
+    - etc...
 
 > Operands
 
