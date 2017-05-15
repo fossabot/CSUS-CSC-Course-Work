@@ -1,68 +1,68 @@
 # Exam 3 Study Guide
-#----------------------------------
-# Binary & Hex Numbers
 
-# Notation (why important)
+## Binary & Hex Numbers
 
-# ASCII
+## Notation (why important)
 
-# Integers
+## ASCII
 
-# Floating point numbers
+## Integers
 
-# Components of the processor
+## Floating point numbers
 
-# Privileged mode
+## Components of the processor
 
-# Types of operands
+## Privileged mode
 
-# Types of opcodes
+## Types of operands
 
-# x86 Registers
+## Types of opcodes
 
-# Compilers
+## x86 Registers
 
-# Assemblers
+## Compilers
 
-# Linkers
+## Assemblers
 
-# Sign-magnitude
+## Linkers
 
-# One's complement
+## Sign-magnitude
 
-# Two's complement
+## One's complement
 
-# Multiplication
+## Two's complement
 
-# Division
+## Multiplication
 
-# Sign Extension
+## Division
 
-# Concept of flags
+## Sign Extension
 
-# How jump statements work
+## Concept of flags
 
-# How to implement If
+## How jump statements work
 
-# Statements, While, For, Switch
+## How to implement If
 
-# What is memory (address, etc.…)
+## Statements, While, For, Switch
 
-# Endianness
+## What is memory (address, etc.…)
 
-# Addressing modes
+## Endianness
 
-# How arrays work
+## Addressing modes
 
-# The stack
+## How arrays work
 
-# Passing parameters using registers
+## The stack
 
-# Stack frames
+## Passing parameters using registers
 
-# How they work on the x86
+## Stack frames
 
-# von Neumann architecture
+## How they work on the x86
+
+## von Neumann architecture
 - Programs are stored and executed in memory.
 - Separation of processing from storage.
 - Different system components communicate over shared buses.
@@ -90,7 +90,7 @@
     - Reset
     - etc...
 
-# Operands
+## Operands
 - The number of operands used in an instruction varies greatly by processor.
 - More operands give greater functionality, but require more bits to store in memory.
 - Typically processors contain 1, 2 or 3 operands.
@@ -132,7 +132,7 @@ add x, y, %R1 # x + y
 sub $50, %R1, z
  ```
 
-# CISC vs. RISC
+## CISC vs. RISC
 - CISC - **C**omplex **I**nstruction **S**et **C**omputer
     - Hardware should contain the complexity rather than the software.
         ##### Why CISC?
@@ -147,7 +147,7 @@ sub $50, %R1, z
         - Easier to program and master by programmers – less to learn.
         - Memory access is minimalized.
 
-# Instruction Encoding
+## Instruction Encoding
 - Each instruction on a computer is encoded into 1's and 0's.
 - All information that needs to be stored, has to be converted to bits.
 - Instructions can either be stored using a variable-length or fixed number of bytes.
@@ -161,13 +161,13 @@ ADD %r1, %r2    ---->     0100 01 10
 10  - Register %r2
  ```
 
-# Multiprogrammed
+## Multiprogrammed
 - Most computers support multiprogramming (aka multitasking)
 - Presents the illusion that multiple programs are running simultaneously on a computer.
 - **Each program executes for a fixed amount of time, known as a timeslice**.
 - User programs do not know if other programs are running on the system.
 
-# Timeslice and context switch
+## Timeslice and context switch
 #### Timeslice
 - **Each program executes for a fixed amount of time, known as a timeslice**.
 #### Context Switch
@@ -179,11 +179,11 @@ ADD %r1, %r2    ---->     0100 01 10
     5. Loads next program into the processor.
 - **This process known as a context switch.**
 
-# Kernal
+## Kernal
 
 - Kernal – the core of the operating system.
 
-# Vector Tables
+## Vector Tables
 - Often an application (or a piece of hardware) needs to talk to the operating system.
     ##### Examples:
     - Software needs the OS to output data.
@@ -196,7 +196,7 @@ ADD %r1, %r2    ---->     0100 01 10
     5. It then executes that address.
         - *(like a function you call in your Java programs)*
 
-# Interrupts
+## Interrupts
 
 - Interrupt Instruction allows your program to "interrupt" itself and pass information to the operating system kernal.
 - Applications do not know where (in memory) to contact the kernal – so they ask the processor to do it.
@@ -208,7 +208,7 @@ ADD %r1, %r2    ---->     0100 01 10
         SYSCALL
         ```
 
-# 5 stages of execution
+## 5 stages of execution
 
 1. **Fetch** an instruction from memory.
     -  First, the processor fetches the instruction from the memory.
@@ -232,12 +232,12 @@ ADD %r1, %r2    ---->     0100 01 10
     - Processor also updates flags and other state information such as the Program Counter.
     - Formally known as Write Back (WB).
 
-# Pipelining
+## Pipelining
 
 - Pipelining is an technique where multiple instructions are executed at the same time.
     - Laundry example...
 - This greatly improves the speed (and efficiency) of a system.
 
-# Data hazards
+## Data hazards
 
-# Jump hazards
+## Jump hazards
