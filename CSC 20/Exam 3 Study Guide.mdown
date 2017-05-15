@@ -36,7 +36,7 @@ public boolean equals(Object o) {
 	if(!(o instanceof Logger))
 		return false;
 	
-	Logger other = (Logger)o; //Cast parameter to foo.
+	Logger other = (Logger)o; //Cast parameter to Logger.
 	boolean equal = (this.numEnteries == other.numEntries);
 
 	for(int i = 0; i < this.numEnteries; i++) {
