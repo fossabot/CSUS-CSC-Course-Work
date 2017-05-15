@@ -8,15 +8,16 @@
 
 ## Integers
 
-## Floating point numbers
+## Floating Point Numbers
 
-## Components of the processor
+## Components of the Processor
 
 ## Privileged mode
+Privileged – only the processor and OS can change it.
 
-## Types of operands
+## Types of Operands
 
-## Types of opcodes
+## Types of Opcodes
 
 ## x86 Registers
 
@@ -26,11 +27,11 @@
 
 ## Linkers
 
-## Sign-magnitude
+## Sign Magnitude
 
-## One's complement
+## One's Complement
 
-## Two's complement
+## Two's Complement
 
 ## Multiplication
 
@@ -40,29 +41,55 @@
 
 ## Concept of flags
 
-## How jump statements work
+## How Jump Statements Work
 
-## How to implement If
+## How to implement If statement
+```assembly
+cmp $21, %rax
+jl End
+#true block
+End:
+```
 
 ## Statements, While, For, Switch
+#### While Loop
+```assembly
+While:
+    cmp $21, %rax
+    jl End
+    
+    #true block
+    jmp While
+End:
+```
 
-## What is memory (address, etc.…)
+#### For Loop
+```assembly
+While:
+    cmp $21, %rax
+    jl End
+    
+    #true block
+    jmp While
+End:
+```
+## What is Memory (address, etc.…)
 
 ## Endianness
 
-## Addressing modes
+## Addressing Modes
 
-## How arrays work
+## How Arrays Work
 
-## The stack
+## The Stack
 
-## Passing parameters using registers
+## Passing Parameters Using Registers
 
 ## Stack frames
 
-## How they work on the x86
+## How They Work on the x86 (Stack Frames)
 
-## von Neumann architecture
+## von Neumann Architecture
 - Programs are stored and executed in memory.
 - Separation of processing from storage.
 - Different system components communicate over shared buses.
@@ -101,7 +128,7 @@
 - The accumulator register.
     - Used for all mathematical computations.
     - Other registers simply are used to compare and hold temporary data.
-```sh
+```assembly
 # z = 50 - (x + y)
 load x
 add y # x + y
@@ -113,7 +140,7 @@ store z
 ##### Two Operand Processors
 - Allows two operands to be specified
 - For computations, both operands are typically treated as input and one is used to store the result.
-```sh
+```assembly
 # z = 50 - (x + y)
 mov x, %R1
 add y, %R1 # x + y
@@ -126,7 +153,7 @@ mov %R2, z
 - Allows two input values like before, but also can specify a third output operand.
 - The third operand can also be used as a index for simple addressing.
 
- ```sh
+ ```assembly
 # z = 50 - (x + y)
 add x, y, %R1 # x + y
 sub $50, %R1, z
@@ -153,7 +180,7 @@ sub $50, %R1, z
 - Instructions can either be stored using a variable-length or fixed number of bytes.
 - The opcode contains a unique value that indicates the operation to be performed.
 
- ```sh
+ ```assembly
 ADD %r1, %r2    ---->     0100 01 10
 
 0100 - Opcode for add
@@ -167,7 +194,7 @@ ADD %r1, %r2    ---->     0100 01 10
 - **Each program executes for a fixed amount of time, known as a timeslice**.
 - User programs do not know if other programs are running on the system.
 
-## Timeslice and context switch
+## Timeslice and Context Switch
 #### Timeslice
 - **Each program executes for a fixed amount of time, known as a timeslice**.
 #### Context Switch
@@ -203,12 +230,12 @@ ADD %r1, %r2    ---->     0100 01 10
     ##### How it Works:
     1. fill registers with values that will tell Linux what do to.
     2. call Linux by using interrupt 0x80 (or a special software interrupt instruction).
-        ```sh
+        ```assembly
         INT 0x80
         SYSCALL
         ```
 
-## 5 stages of execution
+## 5 Stages of Execution
 
 1. **Fetch** an instruction from memory.
     -  First, the processor fetches the instruction from the memory.
