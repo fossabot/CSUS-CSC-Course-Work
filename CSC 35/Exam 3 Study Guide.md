@@ -40,14 +40,41 @@ Privileged – only the processor and OS can change it.
 ## Sign Extension
 
 ## Concept of flags
+- A flag is a Boolean value that indicates the result of an action.
+- These are set by various actions such as calculations, comparisons, etc…
+- Flags are typically stored as individual bits in the Status Register.
+- You can't change the register directly, but numerous instructions use it for control and logic.
+
+#### x86 Flags Used by Compare
+
 
 ## How Jump Statements Work
+#### Jump Equal
+```assembly
+cmp $13, %rax
+je Equal
+    ...
+
+Equal:
+    ...
+```
+#### Jump Greater or Equal
+```assembly
+mov $42, %rax
+cmp $13, %rax
+jge Bigger
+    ...
+Bigger:
+    add $5, %rax
+```
+
 
 ## How to implement If statement
 ```assembly
 cmp $21, %rax
 jl End
-#true block
+    #true block
+    
 End:
 ```
 
@@ -65,12 +92,35 @@ End:
 
 #### For Loop
 ```assembly
-While:
-    cmp $21, %rax
-    jl End
+mov $0, %r15
+For:
+    cmp $3, %r15
+    jl End              # When %r15 == 3, we're done.
     
-    #true block
-    jmp While
+    #Some code... :D
+    
+    jmp For             # %r15 != 3, jump back.
+End:
+```
+
+#### Switch Statement
+```assembly
+    mov Party, %rax
+    cmp $1, %rax
+    je case_1
+    cmp $2, %rax
+    je case_2
+    jmp default
+
+case_1:
+    call Democrat
+    jmp End
+case_2:
+    call Republican
+    jmp End
+default:
+    call ThirdParty
+    
 End:
 ```
 ## What is Memory (address, etc.…)
