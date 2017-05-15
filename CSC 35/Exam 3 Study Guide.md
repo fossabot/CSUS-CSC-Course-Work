@@ -45,6 +45,13 @@ Privileged – only the processor and OS can change it.
 - Flags are typically stored as individual bits in the Status Register.
 - You can't change the register directly, but numerous instructions use it for control and logic.
 
+| Name | Description | When True |
+| ------ | ------ | ------ |
+| CF | Carry Flag | If an extra bit was "carried" or "borrowed" during math.|
+| ZF | Zero Flag | All the bits in the result are zero. | 
+| SF | Sign Flag | If the most significant bit is 1.
+| OF | Overflow Flag | If the sign-bit changed when it shouldn’t have.
+
 #### x86 Flags Used by Compare
 
 
