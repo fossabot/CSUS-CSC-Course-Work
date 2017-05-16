@@ -7,15 +7,16 @@ import java.util.*;
 
 public class Reader {
     public static void main(String[] args) {
-    	ArrayList<Integer> a = new ArrayList<>();
+        ArrayList<Integer> a = new ArrayList<>();
         ArrayList<String> b = new ArrayList<>();
-        File inputFile = new File("data.txt");
-	
-        while(file.hasNext() == true) {
-            if(file.hasNextInt() == true)
-                a.add(file.nextInt());
+        File data = new File("data.txt");
+        Scanner input = new Scanner(data);
+            
+        while(input.hasNext() == true) {
+            if(input.hasNextInt() == true)
+                a.add(input.nextInt());
             else
-                b.add(file.next());
+                b.add(input.next());
         }
         
         for(int i = 0; i < a.size(); i++) {
@@ -25,6 +26,7 @@ public class Reader {
         for(int j = 0; j < a.size(); j++) {
             System.out.println(b.get(j));
         }
+    }
 }
 ```
 > Write an equals method.
