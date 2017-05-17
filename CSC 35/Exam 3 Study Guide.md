@@ -511,5 +511,13 @@ ADD %r1, %r2    ---->     0100 01 10
 - This greatly improves the speed (and efficiency) of a system.
 
 ## Data hazards
+- **Read-After-Write Hazard** - Caused when one instruction reads data before the previous one has written it.
+- **Write-After-Read Hazard** -  Caused when one instruction writes data before the previous one has read it.
+- **Write-After-Write Hazard** - Caused two instructions attempt to write data, and the later one writes it first.
 
+#### Solutions:
+- Score Boarding - Presence bit (p-bit) added to each register. 
+    - p = 0 - Register locked, instruction is going to write data to this register.
+    - P = 1 - Data avaliable to read.
+    
 ## Jump hazards
