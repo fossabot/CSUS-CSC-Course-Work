@@ -23,7 +23,7 @@ public class Reader {
             System.out.println(a.get(i));
         }
         
-        for(int j = 0; j < a.size(); j++) {
+        for(int j = 0; j < b.size(); j++) {
             System.out.println(b.get(j));
         }
     }
