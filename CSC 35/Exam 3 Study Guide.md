@@ -211,10 +211,35 @@ default:
 End:
 ```
 ## What is Memory (address, etc.…)
-
+- Memory is essentially a long list of bytes.
+- Memory is sometimes referred to as storage.
+- This is because it stores both running programs and their related data.
+- Memory is divided into a storage locations that can hold 1 byte (8 bits) of data.
+- Each byte has an address
+    - Unique value that refers to that specific byte.
+    - Used to locate the exact byte the processor wants.
 ## Endianness
+- Big-Endian approach - Store the most significant byte first.
+- Little-Endian approach - Store the most significant byte last.
 
 ## Addressing Modes
+- Immediate Addressing - A value is stored as part of the instruction.
+```assembly
+mov $7, %r15
+```
+- Register Addressing - A value is read from or stored into one of the processor's registers.
+- Direct Addressing - Tthe processor reads data directly from RAM.
+```assembly
+.data
+Total:
+    .quad 0
+.text
+.global _start
+_start:
+    mov Total, %rax
+```
+- Register Indirect Addressing - Stores a RAM address in a register.
+- Relative Addressing - Used in conditional jump statements. The instruction only stores the value to add to the program counter.
 
 ## How Arrays Work
 
