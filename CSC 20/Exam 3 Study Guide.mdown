@@ -54,7 +54,26 @@ public boolean equals(Object o) {
 > Simulate and/or write selection sort and/or binary search on an array.
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/f8hXR_Hvybo/0.jpg)](https://www.youtube.com/watch?v=f8hXR_Hvybo)
-
+```java
+public class SelectionSort {
+	public static void main(Stringp[] args) {
+	int i, j, first, temp;  
+    
+    for ( i = num.length - 1; i > 0; i - - )  
+    {
+        first = 0;   //initialize to subscript of first element
+        for(j = 1; j <= i; j ++)   //locate smallest element between positions 1 and i.
+        {
+            if(num[j] < num[first] )         
+            first = j;
+        }
+          
+        temp = num[first];   //swap smallest found with element in position i.
+        num[first] = num[i];
+        num[i] = temp; 
+      }     
+}
+```
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/P3YID7liBug/0.jpg)](https://www.youtube.com/watch?v=P3YID7liBug)
 
 > Simulate the shunting-yard algorithm on a logic expression.
