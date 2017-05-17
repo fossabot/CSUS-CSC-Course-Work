@@ -268,10 +268,71 @@ pop %rax        # Poped from the stack.
 ```
 
 ## Passing Parameters Using Registers
+- Store data in registers, which can be use by your program.
+```assembly
+_start:
+    mov $4, %rax
+    mov $12, %rbx
+    call AddIt
+    add $1, %rbx
+...
+AddIt:
+    add %rax, %rbx
+    ret    
+```
 
 ## Stack frames
+- Rather than pass all parameters through registers, the system stack is used.
+- The stack is also used to store local variables.
+- Contains all the information needed by subroutine.
+- Includes:
+    - calling program's return address
+    - input parameters to the subroutine
+    - the subroutine’s local variables
+    - space to backup the caller's register file
+
+#### How it Starts Up
+- Caller
+    - pushes the subroutine's arguments onto the stack
+    - caller calls the subroutine
+- Subroutine then…
+    - uses the stack to backup registers and "carve" out local variables.
+   
+#### How it Finishes
+- Subroutine…
+    - restores the original register values
+    - removes the local variables from the stack
+    - calls the processor "return" instruction
+- Caller, then…
+    - removes its arguments from the stack
+    - handles the result – which can be p
 
 ## How They Work on the x86 (Stack Frames)
+- The stack base on the x86 is stored in high memory and grows downwards towards 0.
+- So, as the size of the stack increases, the stack pointer (RSP) will decrease in value.
+
+#### Structure
+    1. Push parameters
+    2. Call the subroutine
+    3. Save the old base pointer
+    4. Add local variables
+    5. Backup registers
+```assembly
+# Subroutine: Setup Example
+push %rbp
+mov %rsp, %rbp
+push $1
+push $2
+push %rax
+push %rbx
+
+# Subroutine: Ending Example
+pop %rbx
+pop %rax
+mov %rbp, %rsp
+pop %rbp
+ret
+ ```   
 
 ## von Neumann Architecture
 - Programs are stored and executed in memory.
@@ -320,7 +381,7 @@ store temp
 load $50
 sub temp # 50 – temp
 store z
- ```
+```
 ##### Two Operand Processors
 - Allows two operands to be specified
 - For computations, both operands are typically treated as input and one is used to store the result.
