@@ -90,16 +90,36 @@ Privileged – Only the processor and OS can change it.
 - What you will see: label conflicts and missing labels.
 
 ## Sign Magnitude
+- One approach is to use the most significant bit (msb) to represent the negative sign.
+- If positive, this bit will be a zero.
+- If negative, this bit will be a 1.
+- This gives a byte a range of -127 to 127 rather than 0 to 255.
 
 ## One's Complement
+- Rather than use a sign bit, the value can be made negative by inverting each bit.
+    - each 1 becomes a 0.
+    - each 0 becomes a 1.
+- Result is a "complement" of the original.
+- This is logically the same as subtracting the number from 0.
 
 ## Two's Complement
+- Practically all computers nowadays use 2's Complement.
+- Similar to 1's complement, but after the number is inverted, 1 is added to the result.
+- Logically the same as:
+    - Subtracting the number from 2^n.
+    - Where n is the total number of bits in the integer.
 
 ## Multiplication
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/vJ_ZEkKLZ8M/0.jpg)](https://www.youtube.com/watch?v=vJ_ZEkKLZ8M)
 
 ## Division
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/TPVFYoxna98/0.jpg)](https://www.youtube.com/watch?v=TPVFYoxna98)
+
 ## Sign Extension
+- Simply adding zeroes to the left, will convert a negative value to a positive one.
+- Add zero, but move the most signigignificant bit to the left. 
+
 
 ## Concept of flags
 - A flag is a Boolean value that indicates the result of an action.
