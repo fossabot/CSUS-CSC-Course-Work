@@ -534,4 +534,4 @@ ADD %r1, %r2    ---->     0100 01 10
 - These pipelines are flushed – data discarded and restarted.
 - Naturally, this causes a huge delay for the new pipeline's startup latency
 - So, conditional branch penalty has a huge effect on processor performance.
-
+![IMAGE ALT TEXT HERE](https://raw.githubusercontent.com/MarcWoodyard/CSUS-CSC-Course-Work/master/CSC%2035/Images/Flush%20-%20Jump%20Hazards.PNG)<br/>
