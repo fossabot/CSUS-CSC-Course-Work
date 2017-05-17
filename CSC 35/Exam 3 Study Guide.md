@@ -45,21 +45,49 @@
     - uses signed magnitude
 
 ## Components of the Processor
+**Execution Unit (EU)** - Performs calculations & logic / registers hold data.<br/>
+    - **Arithmetic Logic Unit** - performs all calculations and comparisons.<br/>
+**Control Logic Unit (CLU)** - reads and decodes instructions / talks to other components.<br/>
 
 ## Privileged mode
 Privileged – Only the processor and OS can change it.
 
 ## Types of Operands
+**Operation** – what to do.<br/>
+**Operands** – what data is to be used.<br/>
+
+- Registers
+- Memory address
+- Register pointing to memory
+- A constant stored with the instruction – this is called an immediate.
 
 ## Types of Opcodes
+- Data Transfer
+- Program Flow Control
+- Arithmetic and Logic operations
+- Input and Output Instructions
 
 ## x86 Registers
-
+```assembly
+%ax %bx %cx %dx %si %di %bp %sp
+%r8w %r9w %r10w %r11w %r12w %r13w %r14w %r15w
+```
 ## Compilers
+- Convert programs from high-level languages (such as C or C++) into assembly language
+- Some create machine-code directly…
 
 ## Assemblers
+- Converts assembly into the binary representation used by the processor.
+- Often the result is an object file
+- Usually not executable - yet
+- Contains computer instructions and information on how to "link" into other executable units
+- File may include: relocation data, unresolved labels, debugging data.
 
 ## Linkers
+- A linker joins multiple parts (usually object files) into a single file.
+- Connects labels (identifiers) - used in one object - to the object to that defines it.
+- So, one object can call another object.
+- What you will see: label conflicts and missing labels.
 
 ## Sign Magnitude
 
