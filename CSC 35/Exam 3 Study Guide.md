@@ -24,12 +24,25 @@
 101 = 101 (decimal)
 ```
 
-
 ## ASCII
+- 7 bits – 128 characters.
+- Uses a full byte, one bit is not used.
+- Alphabetic characters (uppercase and lowercase) are 32 "code points" apart.
+- Uppercase and lowercase letters are just 1 bit different.
 
 ## Integers
+- Integer data types are stored in simple binary numbers.
+- The number of bytes used varies: 1, 2, 4, etc….
 
 ## Floating Point Numbers
+- Floating point numbers are used to represent quantities that cannot be represented by integers.
+- Regular binary numbers can only store whole positive and negative values.
+- Many numbers outside the range representable within the system's bit width (too large/small).
+- Floating-point numbers are usually stored using the IEEE 754 standard.
+- Represent by a mantissa and an exponent
+    - similar to scientific notation
+    - the value of a number is: mantissa × 2exponent
+    - uses signed magnitude
 
 ## Components of the Processor
 
