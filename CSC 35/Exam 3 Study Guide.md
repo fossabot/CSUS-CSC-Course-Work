@@ -516,8 +516,22 @@ ADD %r1, %r2    ---->     0100 01 10
 - **Write-After-Write Hazard** - Caused two instructions attempt to write data, and the later one writes it first.
 
 #### Solutions:
-- Score Boarding - Presence bit (p-bit) added to each register. 
+- **Score Boarding** - Presence bit (p-bit) added to each register. 
     - p = 0 - Register locked, instruction is going to write data to this register.
     - P = 1 - Data avaliable to read.
+- **Bypass Forwarding** - The result is forwarded to the next register's read stage.
+    - Essentially, we pass the ALU output from the first instruction directly to the second instruction. We skip the register file.
     
 ## Jump hazards
+> One instruction contains a conditional jump. Do we just execute the instructions after it? They may never run!
+- Unconditional and conditional branches, create data dependencies between... 
+    - Branch instruction and the instruction fetch stage of the pipeline.
+    - Branch instruction computes the address of the next instruction - that the instruction fetch stage should fetch.
+
+#### Flushing 
+- After the conditional branch instruction is analyzed, the hardware changes the program counter.
+- All the instructions in the pipeline are invalid (since they will not execute).
+- These pipelines are flushed – data discarded and restarted.
+- Naturally, this causes a huge delay for the new pipeline's startup latency
+- So, conditional branch penalty has a huge effect on processor performance.
+
