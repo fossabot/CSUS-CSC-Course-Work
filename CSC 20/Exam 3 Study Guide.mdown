@@ -79,10 +79,9 @@ public class SelectionSort {
 int[] data;
 int size;
 
-   public boolean binarySearch(int key) 
-   {
-   	int low = 0;
-        int high = size - 1;
+public boolean binarySearch(int key)  {
+	int low = 0;
+	int high = size - 1;
          
         while(high >= low) {
         	int middle = (low + high) / 2;
