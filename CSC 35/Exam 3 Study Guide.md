@@ -238,12 +238,34 @@ Total:
 _start:
     mov Total, %rax
 ```
-- Register Indirect Addressing - Stores a RAM address in a register.
-- Relative Addressing - Used in conditional jump statements. The instruction only stores the value to add to the program counter.
+- Register Indirect Addressing - Stores a RAM address in a register.<br/>
+![IMAGE ALT TEXT HERE](https://raw.githubusercontent.com/MarcWoodyard/CSUS-CSC-Course-Work/master/CSC%2035/Images/Register%20Indirect%20Addressing.PNG)<br/>
+- Relative Addressing - Used in conditional jump statements. The instruction only stores the value to add to the program counter.<br/>
+![IMAGE ALT TEXT HERE](https://raw.githubusercontent.com/MarcWoodyard/CSUS-CSC-Course-Work/master/CSC%2035/Images/Relative%20Addressing.PNG)<br/>
 
 ## How Arrays Work
+- When you create an array…
+    - You allocate a block of memory.
+    - Each element (cell) is located sequentially in memory – one right after each other.
+    
+- Start of our block of memory (buffer) is at address 2000.
+- The first array cell is at 2000
+- Arrays consists of bytes…
+    - the second is at 2001
+    - the third is at 2002
+    - the fourth at 2003
+    - etc…
+> **Formula:** Start of Buffer + (Index * Size) 
 
 ## The Stack
+- A stack is an abstract data structure that stores objects.
+- Based on the concept of a stack of items – like a stack of dishes.
+- Data can only be added to or removed from the top of the stack (First in Last Out).
+```assembly
+mov $7, %rax
+push %rax       # Pushed to the stack.
+pop %rax        # Poped from the stack.    
+```
 
 ## Passing Parameters Using Registers
 
