@@ -84,6 +84,8 @@ public class SelectionSort {
 
 [Worksheet Link](https://github.com/MarcWoodyard/CSUS-CSC-Course-Work/blob/master/CSC%2020/Lecture%20Notes/Big%20O.pdf) 
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/v4cd1O4zkGw/0.jpg)](https://www.youtube.com/watch?v=v4cd1O4zkGw)
+
 > Know how to use these methods.
 
 * [List: add, remove, get, set, size](https://docs.oracle.com/javase/8/docs/api/java/util/List.html)
