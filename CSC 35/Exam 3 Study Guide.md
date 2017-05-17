@@ -1,8 +1,29 @@
 # Exam 3 Study Guide
 
 ## Binary & Hex Numbers
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/LpuPe81bc2w/0.jpg)](https://www.youtube.com/watch?v=LpuPe81bc2w)
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/X98CaaVV7GQ/0.jpg)](https://www.youtube.com/watch?v=X98CaaVV7GQ)
 
 ## Notation (why important)
+- Hexadecimal and binary notations use the same digits we use for decimal.
+- As a result, some numbers look like valid hex, decimal and binary numbers.
+
+> For example is **101** …<br/>
+>    * binary value 5? <br/>
+>    * decimal value 101? <br/>
+>    * hexadecimal value 257? <br/>
+>
+> This, obviously, can become problematic.
+
+- One notation is to use postfix character for binary and hexadecimal numbers.
+- If no character is present, decimal is assumed.
+```assembly
+101h = 257 (hexadecimal)
+101b = 5 (binary)
+101 = 101 (decimal)
+```
+
 
 ## ASCII
 
