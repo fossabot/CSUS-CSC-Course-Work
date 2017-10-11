@@ -1,10 +1,8 @@
-/*
- * Plugin Name: Bicycle Speed Calculator
+/**
+ * Title: Bicycle Speed Calculator
  * Description: Calcualtes the speed of a bicycle based on the gear size and cadence.
- * Author: Marc Woodyard
- * Version: 0.0.1
- * Author URI: https://marcwoodyard.com
- * License: GPL2+
+ * @author Marc Woodyard
+ * @version: 0.0.1
  */
 import java.math.BigDecimal;
 
